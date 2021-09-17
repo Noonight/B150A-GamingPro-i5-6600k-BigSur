@@ -6,11 +6,11 @@
 
 ## Setup
 
-- B150A GAMING PRO
-- i5 6660k
+- MSI B150A GAMING PRO
+- i5 6600k
 - hd 530
 - 16gb ram
-- 512gb ssd
+- 500gb ssd
 - 2560x1080 monitor. HDMI
 
 > Note: By default `hd 530` max resolution 1920x1080. 
@@ -51,5 +51,22 @@ Taken bios configuration from [this site](https://www.codejam.info/2019/03/macos
 
 > Note: Had black screen long time `~2 hrs`. Don't reboot, wait.
 
-##### TODO:
-- fix resoultion
+## Fix resolution
+
+> Note: Didn't tried to install with this configs
+
+Replace `PciRoot(0x0)/Pci(0x2,0x0)` properties with 
+
+| Key | Value |
+| ------ | ------ |
+| AAPL,ig-platform-id | 00001619 |
+| AAPL,slot-name | Internal@0,2,0 |
+| device_type | VGA compatible controller |
+| enable-hdmi20 | 01000000  |
+| framebuffer-con0-alldata | 00001200 02000000 98000000 01051200 00080000 87010000 02041200 00080000 87010000  |
+| framebuffer-con0-enable | 01000000  |
+| framebuffer-patch-enable | 01000000  |
+| framebuffer-unifiedmem | 00000080  |
+| model | Intel HD Graphics 530 |
+
+> Note: Get from previous EFI build
