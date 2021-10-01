@@ -70,3 +70,5 @@ Replace `PciRoot(0x0)/Pci(0x2,0x0)` properties with
 | model | Intel HD Graphics 530 |
 
 > Note: Get from previous EFI build
+
+> Update: Successfully updated to `macOS Big Sur 11.6`
